@@ -19,5 +19,7 @@ public class NoteRepository {
     }
 
 
-
+    public String getItem(int position) {
+        return model.get(position);
+    }
 }

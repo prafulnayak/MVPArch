@@ -8,11 +8,17 @@ public interface NotesContract {
 
         void showAddNote(List<String> data);
 
+        void showRecViewNote(List<String> data);
+
+        void showDetailInAnotherActivity(String data);
+
     }
 
     interface UserActionsListener {
 
         void loadNotes(String text);
+
+        void onRvClick(int position);
 
 
     }

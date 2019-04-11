@@ -17,5 +17,13 @@ public class NotePresenter implements NotesContract.UserActionsListener {
         mNotesRepository.insert(text);
         mNotesView.showAddNote(mNotesRepository.getData());
 
+        mNotesView.showRecViewNote(mNotesRepository.getData());
+
+    }
+
+    @Override
+    public void onRvClick(int position) {
+        String d = mNotesRepository.getItem(position);
+        mNotesView.showDetailInAnotherActivity(d);
     }
 }
